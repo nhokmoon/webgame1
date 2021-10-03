@@ -1,8 +1,4 @@
-// console.log(document.querySelector('.message').textContent);
-// document.querySelector('.message').textContent = 'Correct Number!!!';
-// document.querySelector('.guess').value = 20;
-// console.log(document.querySelector('.guess').value);
-const hiddenNumber = Math.trunc(Math.random()*20)+1;
+
 const fkh = ['it to hight your fucking dumb!!!',
             'still to hight your dumb!',
             'still hight, fucking dumb!',
@@ -17,7 +13,10 @@ const fkl = ['it to low your fucking dumb!!!',
             'U are my most stupid player'
 ];
 
+let hiddenNumber = Math.trunc(Math.random()*20)+1;
+
 let Score = 20;
+
 document.querySelector('.check').addEventListener('click',
 function() {
     const guessNumber =Number(document.querySelector('.guess').value);
@@ -53,4 +52,15 @@ function() {
             document.querySelector('.message').textContent = 'your failed, LOSER!!!';
         }
     }
+});
+
+document.querySelector('.again').addEventListener('click',
+function(){
+    Score = 20;
+    hiddenNumber = Math.trunc(Math.random()*20)+1;
+    document.querySelector('.message').textContent = 'ohhh you want play again? LOSER';
+    document.querySelector('.score').textContent = Score;
+    document.querySelector('.number').textContent = '?';
+    document.querySelector('.guess').value = '';
+    document.querySelector('body').style.backgroundColor = '#222';
 });
