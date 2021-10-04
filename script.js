@@ -22,10 +22,12 @@ function() {
     const guessNumber =Number(document.querySelector('.guess').value);
 
     if (!guessNumber) {
-        document.querySelector('.message').textContent ='1 to 20 number your fucking!!! Why are you so dumb man?';
+        document.querySelector('.message').textContent =
+        '1 to 20 number your fucking!!! Why are you so dumb man?';
     }
     else if (guessNumber === hiddenNumber){
-        document.querySelector('.message').textContent ='ohh it correct,your fucking dumb!';
+        document.querySelector('.message').textContent =
+        'ohh it correct,your fucking dumb!';
         document.querySelector('.number').textContent = hiddenNumber;
         document.querySelector('.highscore').textContent = Score;
         document.querySelector('body').style.backgroundColor = '#60b347';
@@ -58,7 +60,8 @@ document.querySelector('.again').addEventListener('click',
 function(){
     Score = 20;
     hiddenNumber = Math.trunc(Math.random()*20)+1;
-    document.querySelector('.message').textContent = 'ohhh you want play again? LOSER';
+    document.querySelector('.message').textContent = 
+    'ohhh you want play again? LOSER';
     document.querySelector('.score').textContent = Score;
     document.querySelector('.number').textContent = '?';
     document.querySelector('.guess').value = '';
